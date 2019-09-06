@@ -1,6 +1,6 @@
 .monaco-editor.hc-black .margin-view-overlays .folding,
 .monaco-editor.vs-dark .margin-view-overlays .folding {
-  background-image: url('file:///Users/xeronic/arrow-down.svg');
+  background-image: url("file:///Users/xeronic/.vsCode/arrow-down.svg");
   margin-left: 2px;
   top: 6px;
   height: 10px;
@@ -8,7 +8,7 @@
 
 .monaco-editor.hc-black .margin-view-overlays .folding.collapsed,
 .monaco-editor.vs-dark .margin-view-overlays .folding.collapsed {
-  background-image: url('file:///Users/xeronic/arrow-up.svg');
+  background-image: url("file:///Users/xeronic/.vsCode/arrow-up.svg");
   margin-left: 2px;
   top: 6px;
   height: 10px;
@@ -31,23 +31,25 @@
   margin-right: 8px;
 }
 
-.monaco-scrollable-element {
-  left: 59px !important;
-  width: calc(100% - 59px) !important;
-}
-
 /* #region FOLDER FOLDING  */
 .monaco-tl-twistie.collapsible {
-  background-image: url('file:///Users/xeronic/arrow-down.svg') !important;
+  background-image: url("file:///Users/xeronic/.vsCode/arrow-down.svg") !important;
   background-size: 8px;
   background-position: center;
-  padding-left: 8px;
 }
 
 .monaco-tl-twistie.collapsible.collapsed {
-  background-image: url('file:///Users/xeronic/arrow-right.svg') !important;
+  background-image: url("file:///Users/xeronic/.vsCode/arrow-right.svg") !important;
   background-size: 8px;
   background-position: center;
-  padding-left: 8px;
 }
 /* #endregion */
+
+.monaco-tl-indent {
+  height: 0;
+}
+
+.margin ~ .monaco-scrollable-element {
+  left: 59px !important;
+  width: calc(100% - 59px) !important;
+}
