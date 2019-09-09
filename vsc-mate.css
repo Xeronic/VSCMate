@@ -14,6 +14,7 @@
   height: 10px;
 }
 
+/* #region Gutter */
 .monaco-editor .margin-view-overlays .line-numbers {
   position: absolute;
   font-size: 12px;
@@ -24,7 +25,14 @@
   cursor: default;
   height: 100%;
   margin-left: 8px;
+  line-height: 1.9;
 }
+
+.monaco-editor .margin-view-overlays .current-line-margin {
+  border-top: 1px solid #595959;
+  border-bottom: 1px solid #595959;
+}
+/* #endregion */
 
 .margin {
   border-right: 1px solid #525252;
@@ -44,16 +52,35 @@
   background-position: center;
 }
 
-.monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab .tab-label, .monaco-workbench .part.editor>.content .editor-group-container>.title .title-label {
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  .tabs-container
+  > .tab
+  .tab-label,
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  .title-label {
   display: flex;
   justify-content: center;
 }
 
-.monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.close-button-left {
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  .tabs-container
+  > .tab.close-button-left {
   padding-right: 28px !important;
   max-width: 236px;
   flex: 1;
-} 
+}
 
 /* #region Hide X on focused tab  */
 /* .tabs-container .action-label.icon.close-editor-action {
@@ -65,9 +92,8 @@
 } */
 /* #endregion */
 
-
 /* #region Make panelbar 25px */
-/* .monaco-workbench .part>.title 
+/* .monaco-workbench .part>.title
 {
   height: 25px !important;
 }
@@ -81,3 +107,90 @@
 }  */
 
 /* #endregion */
+
+/* #region Make tabs border top */
+.tabs-container .tab {
+  border-top: 1px solid #b0b0b0;
+}
+
+.tabs-container .tab.active {
+  border-top: 1px solid #d3d3d3;
+}
+
+/* #endregion */
+
+/* #region Change color panelbar */
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title.tabs
+  > .tabs-and-actions-container {
+  background-color: #c4c4c4 !important;
+}
+
+.monaco-workbench .part > .composite.title {
+  background-color: #c4c4c4;
+  color: #c4c4c4;
+}
+
+/* #endregion */
+
+.margin ~ .monaco-scrollable-element.editor-scrollable {
+  left: 59px !important;
+  width: calc(100% - 59px) !important;
+}
+
+.monaco-tl-indent {
+  visibility: hidden;
+}
+
+/* #region Make panelbar width 100vw */
+.monaco-workbench .part > .content {
+  overflow: visible !important;
+}
+
+.monaco-grid-view {
+  overflow: visible !important;
+}
+
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title.tabs
+  > .tabs-and-actions-container
+  > .monaco-scrollable-element {
+  z-index: 10;
+}
+
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  .editor-actions {
+  border-top: 1px solid #b0b0b0;
+  box-sizing: border-box;
+  z-index: 10;
+}
+.monaco-workbench .part.editor > .content .editor-group-container > .title {
+  width: 100vw;
+}
+
+.tabs-container {
+  overflow: visible !important;
+  border-top: 1px solid #b0b0b0;
+  box-sizing: border-box;
+}
+
+.tabs-container .tab {
+  top: -1px;
+  z-index: 1000;
+}
+
+/* #endregion */
+
+.titlebar {
+  background-image: linear-gradient(to bottom, #ededed, #d3d3d3) !important;
+}
