@@ -1,6 +1,6 @@
 .monaco-editor.hc-black .margin-view-overlays .folding,
 .monaco-editor.vs-dark .margin-view-overlays .folding {
-  background-image: url("file:///Users/xeronic/.vsCode/arrow-down.svg");
+  background-image: url('file:///Users/xeronic/.vsCode/arrow-down.svg');
   margin-left: 2px;
   top: 6px;
   height: 10px;
@@ -8,7 +8,7 @@
 
 .monaco-editor.hc-black .margin-view-overlays .folding.collapsed,
 .monaco-editor.vs-dark .margin-view-overlays .folding.collapsed {
-  background-image: url("file:///Users/xeronic/.vsCode/arrow-up.svg");
+  background-image: url('file:///Users/xeronic/.vsCode/arrow-up.svg');
   margin-left: 2px;
   top: 6px;
   height: 10px;
@@ -41,13 +41,13 @@
 
 /* #region FOLDER FOLDING  */
 .monaco-tl-twistie.collapsible {
-  background-image: url("file:///Users/xeronic/.vsCode/arrow-down.svg") !important;
+  background-image: url('file:///Users/xeronic/.vsCode/arrow-down.svg') !important;
   background-size: 8px;
   background-position: center;
 }
 
 .monaco-tl-twistie.collapsible.collapsed {
-  background-image: url("file:///Users/xeronic/.vsCode/arrow-right.svg") !important;
+  background-image: url('file:///Users/xeronic/.vsCode/arrow-right.svg') !important;
   background-size: 8px;
   background-position: center;
 }
@@ -193,4 +193,13 @@
 
 .titlebar {
   background-image: linear-gradient(to bottom, #ededed, #d3d3d3) !important;
+}
+
+.titlebar .window-title {
+  font-weight: 600;
+  font-size: 13px !important;
+}
+
+.editor-actions {
+  display: none;
 }
