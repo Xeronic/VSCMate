@@ -1,22 +1,23 @@
-.monaco-editor.hc-black .margin-view-overlays .folding,
-.monaco-editor.vs-dark .margin-view-overlays .folding {
-  background-image: url('file:///Users/xeronic/.vsCode/arrow-down.svg');
+.monaco-editor .margin-view-overlays .folding,
+.monaco-editor .margin-view-overlays .folding {
+  background-image: url('file:///Users/jerrypedersen/.vscode/arrow-down.svg');
   margin-left: 2px;
-  top: 6px;
-  height: 10px;
+  top: 5px;
+  height: 12px;
 }
 
-.monaco-editor.hc-black .margin-view-overlays .folding.collapsed,
-.monaco-editor.vs-dark .margin-view-overlays .folding.collapsed {
-  background-image: url('file:///Users/xeronic/.vsCode/arrow-up.svg');
+.monaco-editor .margin-view-overlays .folding.collapsed,
+.monaco-editor .margin-view-overlays .folding.collapsed {
+  background-image: url('file:///Users/jerrypedersen/.vscode/arrow-up.svg');
   margin-left: 2px;
-  top: 6px;
-  height: 10px;
+  top: 5px;
+  height: 12px;
 }
 
 /* #region Gutter */
 .monaco-editor .margin-view-overlays .line-numbers {
   position: absolute;
+  color: #9f9f9f !important;
   font-size: 12px;
   text-align: right;
   display: inline-block;
@@ -28,9 +29,14 @@
   line-height: 1.9;
 }
 
+.monaco-editor .margin-view-overlays .current-line ~ .line-numbers {
+  color: #c6c6c6 !important;
+}
+
 .monaco-editor .margin-view-overlays .current-line-margin {
   border-top: 1px solid #595959;
   border-bottom: 1px solid #595959;
+  color: #c6c6c6 !important;
 }
 /* #endregion */
 
@@ -41,13 +47,13 @@
 
 /* #region FOLDER FOLDING  */
 .monaco-tl-twistie.collapsible {
-  background-image: url('file:///Users/xeronic/.vsCode/arrow-down.svg') !important;
+  background-image: url('file:///Users/jerrypedersen/.vscode/explorer-arrow-down.svg') !important;
   background-size: 8px;
   background-position: center;
 }
 
 .monaco-tl-twistie.collapsible.collapsed {
-  background-image: url('file:///Users/xeronic/.vsCode/arrow-right.svg') !important;
+  background-image: url('file:///Users/jerrypedersen/.vscode/explorer-arrow-right.svg') !important;
   background-size: 8px;
   background-position: center;
 }
@@ -82,16 +88,6 @@
   flex: 1;
 }
 
-/* #region Hide X on focused tab  */
-/* .tabs-container .action-label.icon.close-editor-action {
-  opacity: 0 !important;
-}
-
-.monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab:hover .close-editor-action {
-  opacity: 1 !important;
-} */
-/* #endregion */
-
 /* #region Make panelbar 25px */
 /* .monaco-workbench .part>.title
 {
@@ -110,11 +106,11 @@
 
 /* #region Make tabs border top */
 .tabs-container .tab {
-  border-top: 1px solid #b0b0b0;
+  border-top: 1px solid #a3a3a3;
 }
 
 .tabs-container .tab.active {
-  border-top: 1px solid #d3d3d3;
+  border-top: 1px solid #d9d9d9;
 }
 
 /* #endregion */
@@ -126,12 +122,12 @@
   .editor-group-container
   > .title.tabs
   > .tabs-and-actions-container {
-  background-color: #c4c4c4 !important;
+  background-color: #bbbbbb !important;
 }
 
 .monaco-workbench .part > .composite.title {
-  background-color: #c4c4c4;
-  color: #c4c4c4;
+  background-color: #bbbbbb;
+  color: #bbbbbb;
 }
 
 /* #endregion */
@@ -170,7 +166,7 @@
   .editor-group-container
   > .title
   .editor-actions {
-  border-top: 1px solid #b0b0b0;
+  border-top: 1px solid #a3a3a3;
   box-sizing: border-box;
   z-index: 10;
 }
@@ -180,7 +176,7 @@
 
 .tabs-container {
   overflow: visible !important;
-  border-top: 1px solid #b0b0b0;
+  border-top: 1px solid #a3a3a3;
   box-sizing: border-box;
 }
 
@@ -192,14 +188,87 @@
 /* #endregion */
 
 .titlebar {
-  background-image: linear-gradient(to bottom, #ededed, #d3d3d3) !important;
+  /* background-image: linear-gradient(to bottom, #ededed, #d3d3d3) !important; */
+  background-image: linear-gradient(to bottom, #e6e5e5, #dad9da) !important;
 }
 
+
+
+
 .titlebar .window-title {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 13px !important;
 }
 
 .editor-actions {
+  display: none;
+}
+
+.tabs-container {
+  height: 26px !important;
+}
+
+.tabs-container .tab {
+  height: 26px !important;
+}
+
+.composite.title {
+  border-top: 1px solid #a3a3a3;
+  height: 26px !important;
+}
+
+.overflow-guard {
+  height: calc(100% + 9px) !important;
+}
+
+/* .sidebar .split-view-view {
+  height: calc(100% - 13px) !important;
+} */
+
+.title-actions {
+  position: absolute !important;
+  top: 26px;
+  right: 0;
+  z-index: 1000000000000;
+}
+
+.title-label {
+  display: none;
+}
+
+.sidebar .content,
+.sidebar .split-view-view {
+  box-sizing: border-box;
+  /* border-top: 1px solid #ececec; */
+  height: auto !important;
+}
+
+.statusbar {
+  background-image: linear-gradient(to bottom, #ededed, #d3d3d3) !important;
+  border-top: 1px solid #d7d7d7;
+}
+
+.tabs-and-actions-container .monaco-scrollable-element {
+  height: 26px !important;
+}
+
+.panel-body {
+  min-height: 100vh;
+}
+
+.tab {
+  background-image: linear-gradient(to bottom, #c3c2c3, #b5b5b5) !important;
+}
+
+.tabs-and-actions-container {
+  background-image: linear-gradient(to bottom, #c3c2c3, #b5b5b5) !important;
+}
+
+.tab.active {
+  background-image: linear-gradient(to bottom, #dad9da, #cacaca) !important;
+} 
+
+/* Remove Custom CSS Logo */
+.__CUSTOM_CSS_JS_INDICATOR_CLS {
   display: none;
 }
